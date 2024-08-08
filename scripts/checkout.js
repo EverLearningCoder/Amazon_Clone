@@ -13,7 +13,18 @@ import { loadProducts, loadProductsFetch } from "../data/products.js";
 });
 */
 
+/*
+
 loadProductsFetch().then(() => {
   renderOrderSummary();
   renderPaymentSummary();
 });
+*/
+
+async function render() {
+  await loadProductsFetch();
+  renderOrderSummary();
+  renderPaymentSummary();
+}
+
+render();
